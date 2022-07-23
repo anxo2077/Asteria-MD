@@ -74,7 +74,6 @@ if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
 m = smsg(AbadIng, mek, store)
 require("./AbadAsteria")(AbadIng, m, chatUpdate, store)
 } catch (err) {
-AbadIng.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
 console.log(err)
 }
 })
