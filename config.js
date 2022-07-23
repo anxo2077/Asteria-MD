@@ -73,19 +73,19 @@ global.sessionName = "session"
 global.antitags = true
 global.prefa = ['','!','.','#','*','/']
 global.mess = {
-    success: 'Done✓',
-    admin: 'This feature is only for admins!',
-    botAdmin: 'Bot Must Be Admin First!',
-    owner: 'This feature is only for owner',
-    group: 'This feature is only for groups!',
-    private: 'This feature is only for private chats!',
-    bot: 'This feature is only for bot',
-    wait: 'In process...',
-    linkm: 'Where is the link?',
+    success: '●●●●●100%',
+    admin: 'Esta función es sólo para los administradores.!',
+    botAdmin: 'El bot debe ser primero un administrador!',
+    owner: 'Esta función es sólo para el owner',
+    group: 'Esta función es sólo para grupos!',
+    private: 'Esta función es sólo para chats privados!',
+    bot: 'Esta función es sólo para bot',
+    wait: '●○○○○20%',
+    linkm: 'Dónde está el link?',
     error: 'Error!',
-    ban: 'You have been banned by the owner, if you want to be unbanned, chat owner.',
-    nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
-    banChat: 'The bot was banned in this group, please contact the owner to unban'
+    ban: 'Has sido baneado por el owner, si quieres ser desbaneado, chatea con el owner.',
+    nsfw: 'La función nsfw no ha sido activada, por favor contacte con el administrador para activarla',
+    banChat: 'El bot fue baneado en este grupo, por favor contacta con el owner para desbanearlo'
 }
 global.limitawal = {
     premium: "Infinity",
