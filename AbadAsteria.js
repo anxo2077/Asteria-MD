@@ -5924,7 +5924,7 @@ Cieeee, What's Going On❤️💖👀`
                 if (isBan) return reply(mess.ban)
                 if (isBanChat && !isCreator) return
                 reply(mess.wait)
-                waifudd = await fetchJson(`https://nekos.life/api/v2/img/${command}`)
+                waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                 var wbuttsss = [
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
@@ -5943,18 +5943,18 @@ Cieeee, What's Going On❤️💖👀`
                 if (isBan) return reply(mess.ban)
                 if (isBanChat && !isCreator) return
                 reply(mess.wait)
-                waifudd = await axios.get(`https://nekos.life/api/v2/img/cuddle`)
+                mesa = await axios.get('https://nekos.life/api/v2/img/cuddle')
                 var wbuttsss = [
-                    { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
+                    { buttonId: `.animecuddle`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
-                let buttonsosMessages = {
-                    image: { url: waifudd.data.url },
+                let buttonsoMessages = {
+                    image: { url: mesa.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
                     headerType: 4
                 }
-                await AbadIng.sendMessage(m.chat, buttonsosMessages, { quoted: m }).catch(err => {
+                await AbadIng.sendMessage(m.chat, buttonsoMessages, { quoted: m }).catch(err => {
                     return ('Error!')
                 })
                 break
