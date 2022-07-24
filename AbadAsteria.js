@@ -5695,7 +5695,7 @@ Cieeee, What's Going On❤️💖👀`
                 if (!AntiNsfw) return reply(mess.nsfw)
                 reply(mess.wait)
                 spankd = await axios.get(`https://nekos.life/api/v2/img/spank`)
-                let spbuff = await getBuffer(spankd.url)
+                let spbuff = await getBuffer(spankd.data.url)
                 let spgif = await GIFBufferToVideoBuffer(spbuff)
                 await AbadIng.sendMessage(m.chat, { video: spgif, gifPlayback: true }, { quoted: m }).catch(err => {
                     return reply('Error!')
@@ -5708,7 +5708,7 @@ Cieeee, What's Going On❤️💖👀`
                 if (!AntiNsfw) return reply(mess.nsfw)
                 reply(mess.wait)
                 bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
-                let bjf = await getBuffer(bjd.url)
+                let bjf = await getBuffer(bjd.data.url)
                 let bjif = await GIFBufferToVideoBuffer(bjf)
                 await AbadIng.sendMessage(m.chat, { video: bjif, gifPlayback: true }, { quoted: m }).catch(err => {
                     return reply('error..')
@@ -5736,7 +5736,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `trap`, buttonText: { displayText: `Next ⚡` }, type: 1 },
                 ]
                 let button2Messages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     buttons: trapbot,
                     headerType: 1
@@ -5756,7 +5756,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.hneko`, buttonText: { displayText: `Next ⚡` }, type: 1 },
                 ]
                 let button3Messages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     buttons: hnekobot,
                     headerType: 1
@@ -5777,7 +5777,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.hneko`, buttonText: { displayText: `Next ⚡` }, type: 1 },
                 ]
                 let button4Messages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     buttons: nwaifubot,
                     headerType: 1
@@ -5796,7 +5796,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonsssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5827,7 +5827,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let button1ssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5846,7 +5846,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let button12ssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5865,7 +5865,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.nom`, buttonText: { displayText: `Next ⚡` }, type: 1 },
                 ]
                 let xx1button3Messages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     buttons: xxhnekobot,
                     headerType: 1
@@ -5883,7 +5883,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let button112ssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5902,7 +5902,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.neko`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonssMessage = {
-                    image: { url: waifud.url },
+                    image: { url: waifud.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbutsss,
@@ -5929,7 +5929,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5948,7 +5948,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonsosMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5967,7 +5967,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let btutttonssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -5986,7 +5986,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let xxbuttonssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -6005,7 +6005,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonsTsMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -6024,7 +6024,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonussMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -6043,7 +6043,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let bxxuttonssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -6062,7 +6062,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttoxnssMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -6081,7 +6081,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonssxMessages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
@@ -6100,7 +6100,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.shinobu`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonsesMessage = {
-                    image: { url: ud.url },
+                    image: { url: ud.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbutsss,
@@ -6119,7 +6119,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.megumin`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonzMessage = {
-                    image: { url: ud.url },
+                    image: { url: ud.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbutsss,
@@ -6138,7 +6138,7 @@ Cieeee, What's Going On❤️💖👀`
                     { buttonId: `.${command}`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let button1Messages = {
-                    image: { url: waifudd.url },
+                    image: { url: waifudd.data.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
