@@ -19,6 +19,8 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 const moment = require('moment-timezone')
 const { JSDOM } = require('jsdom')
 const speed = require('performance-now')
+const nekosLife = require("nekos.life")
+const neko = new nekosLife();
 const hx = require("hxz-api")
 const hxz = require('./lib/hxz-api')
 const bdr = require('rumus-bdr')
@@ -5943,12 +5945,12 @@ Cieeee, What's Going On❤️💖👀`
                 if (isBan) return reply(mess.ban)
                 if (isBanChat && !isCreator) return
                 reply(mess.wait)
-                mesa = await axios.get('https://nekos.life/api/v2/img/cuddle')
+                mesa = await neko.hug()
                 var wbuttsss = [
                     { buttonId: `.animecuddle`, buttonText: { displayText: `Next ✨` }, type: 1 },
                 ]
                 let buttonsoMessages = {
-                    image: { url: mesa.data.url },
+                    image: { url: mesa.url },
                     caption: `Here you go!`,
                     footer: `${global.botname}`,
                     buttons: wbuttsss,
