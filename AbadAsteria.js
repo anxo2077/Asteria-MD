@@ -5034,17 +5034,7 @@ Por favor, elija el botón de abajo`
                     caption: texttk,
                     footer: `${botname}`,
                     buttons: buttons,
-                    headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: `${ownername}`,
-                            body: `${pushname}`,
-                            thumbnail: log0,
-                            mediaType: 1,
-                            mediaUrl: q,
-                            sourceUrl: q
-                        }
-                    }
+                    headerType: 4
                 }
                 AbadIng.sendMessage(from, buttonMessage, { quoted: m })
             }
