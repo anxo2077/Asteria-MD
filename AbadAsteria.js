@@ -830,13 +830,13 @@ During ${clockString(new Date - user.afkTime)}
             teks = `Type .owner to join your whatsapp group`
             sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Resources/theme/AsteriaThumb.jpg'), `${watermark}`, `${botname}`, "57322536629@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
         }
-        /*const bodyyy = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
-        if (!isCmd && !m.isGroup && !m.key.fromMe) {
-        const simi = await fetchJson(`https://caliph.my.id/api/simi.php?text=${budy}`)
-        const sami = simi.result
-        await AbadIng.sendMessage(from, {text:sami}, {quoted:m})
-        }*/
 
+        /*if (budy.includes(m.text)) {
+            const simi = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=es&cf=false`)
+            const sami = simi.success
+            await AbadIng.sendMessage(from, {text:sami}, {quoted:m})
+        }*/
+        
         // AntiLink
         if (AntiLink) {
             linkgce = await AbadIng.groupInviteCode(from)
