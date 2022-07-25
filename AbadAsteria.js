@@ -5021,19 +5021,16 @@ ${global.themeemoji} Media Url : ${images}`,
                 if (!q) return reply('Where is the link?')
                 reply(mess.wait)
                 if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-                const musim_rambutan = await AbadBotIncTiktok(`${q}`).catch(e => {
-                    reply(mess.error)
-                })
-                console.log(musim_rambutan)
-                const Abadtiktoknowm = musim_rambutan.result.nowatermark
-                texttk = `Wanna download no watermark or audio?
-_Please choose the button below_`
+                anu = await fetchJson(`https://api.akuari.my.id/downloader/tiktok?link=${q}`)
+                lagu = await getBuffer(anu.respon.video)
+                texttk = `¿Quieres descargar con marca de agua o audio?
+Por favor, elija el botón de abajo`
                 let buttons = [
                     { buttonId: `ttwm ${q}`, buttonText: { displayText: 'Water ❌' }, type: 1 },
                     { buttonId: `ttaud ${q}`, buttonText: { displayText: 'Audio 🎶' }, type: 1 }
                 ]
                 let buttonMessage = {
-                    video: { url: Abadtiktoknowm },
+                    video: lagu,
                     caption: texttk,
                     footer: `${botname}`,
                     buttons: buttons,
