@@ -5023,11 +5023,9 @@ ${global.themeemoji} Media Url : ${images}`,
                 if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
                 anu = await fetchJson(`https://api.akuari.my.id/downloader/tiktok?link=${q}`)
                 lagu = await getBuffer(anu.respon.video)
-                texttk = `¿Quieres descargar con marca de agua o audio?
-Por favor, elija el botón de abajo`
+                texttk = ``
                 let buttons = [
-                    { buttonId: `ttwm ${q}`, buttonText: { displayText: 'Water ❌' }, type: 1 },
-                    { buttonId: `ttaud ${q}`, buttonText: { displayText: 'Audio 🎶' }, type: 1 }
+                    { buttonId: `ttaud ${q}`, buttonText: { displayText: '⚝ Audio ⚝' }, type: 1 }
                 ]
                 let buttonMessage = {
                     video: lagu,
@@ -5039,20 +5037,6 @@ Por favor, elija el botón de abajo`
                 AbadIng.sendMessage(from, buttonMessage, { quoted: m })
             }
                 break
-            case 'tiktokwm': case 'ttwm': {
-                if (isBan) return reply(mess.ban)
-                if (isBanChat && !isCreator) return
-                if (!q) return reply('Where is the link?')
-                reply(mess.wait)
-                if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-                const musim_rambutan = await AbadBotIncTiktok(`${q}`).catch(e => {
-                    reply(mess.error)
-                })
-                console.log(musim_rambutan)
-                const Abadtiktokop = musim_rambutan.result.watermark
-                AbadIng.sendMessage(from, { video: { url: Abadtiktokop }, caption: "Here you go!" }, { quoted: m })
-            }
-                break
             case 'tiktokaudio':
             case 'tiktokmusic':
             case 'ttaud': {
@@ -5060,12 +5044,9 @@ Por favor, elija el botón de abajo`
                 if (isBanChat && !isCreator) return
                 if (!q) return reply('Where is the audio?')
                 if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-                const musim_rambutan = await AbadBotIncTiktok(`${q}`).catch(e => {
-                    reply(mess.error)
-                })
-                console.log(musim_rambutan)
-                const Abadytiktokaudio = musim_rambutan.result.nowatermark
-                AbadIng.sendMessage(from, { audio: { url: Abadytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
+                anu = await fetchJson(`https://api.akuari.my.id/downloader/tiktok?link=${q}`)
+                lagu = await getBuffer(anu.respon.audio)
+                AbadIng.sendMessage(from, { audio: lagu, mimetype: 'audio/mp4' }, { quoted: m })
             }
                 break
             case 'play2': case 'ytplay2': {
@@ -6583,6 +6564,8 @@ ${themeemoji} Url : ${result.link}
 ╰━┬≯ 
 ╭━┤ 〘 *_Download_* 〙
 ┊   ╰━─┈
+┊ ${prefix}tiktok
+┊ ${prefix}tiktokaudio
 ┊ ${prefix}instagramstory
 ┊ ${prefix}instagramstory2
 ┊ ${prefix}instagram2
@@ -7121,9 +7104,6 @@ ${themeemoji} Url : ${result.link}
 ┊ ${prefix}ephemeral
 ┊ ${prefix}inspectgclink
 ┊ ${prefix}write
-┊ ${prefix}tiktok
-┊ ${prefix}tiktokwm
-┊ ${prefix}tiktokaudio
 ┊ ${prefix}wallneon
 ┊ ${prefix}wallrandom
 ┊ ${prefix}wallcode
@@ -7296,6 +7276,8 @@ ${themeemoji} Url : ${result.link}
 ╰━┬≯
 ╭━┤ 
 ┊   ╰━─┈	
+┊ ${prefix}tiktok
+┊ ${prefix}tiktokaudio
 ┊ ${prefix}instagramstory
 ┊ ${prefix}instagramstory2
 ┊ ${prefix}instagram2
@@ -7629,9 +7611,6 @@ ${themeemoji} Url : ${result.link}
 ┊ ${prefix}ephemeral
 ┊ ${prefix}inspectgclink
 ┊ ${prefix}write
-┊ ${prefix}tiktok
-┊ ${prefix}tiktokwm
-┊ ${prefix}tiktokaudio
 ┊ ${prefix}wallneon
 ┊ ${prefix}wallrandom
 ┊ ${prefix}wallcode
