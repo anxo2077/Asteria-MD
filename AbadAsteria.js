@@ -7630,6 +7630,12 @@ ${themeemoji} Url : ${result.link}
 My family
 And all friends who helped assemble this sexy script !!!`)
                 break
+                case 'asteria':       
+    if (!q) return reply(`Hola  quieres charlar un rato?\n Responde con *${prefix + command}* (tu mensaje)\n\n ❤️Ejemplo ${prefix + command} Hola bot`)
+		anu = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=es&cf=false`)
+        simfg = (`${anu.success}`)      
+        m.reply(simfg)
+        break
             default:
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return reply(mess.owner)
