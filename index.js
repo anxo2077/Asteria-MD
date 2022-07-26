@@ -148,7 +148,7 @@ AbadIng.ev.on('group-participants.update', async (anu) => {
 ┊ ${metadata.subject}
 ╰━─━─━─┈`
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./Resources/theme/Asteria.xlsx'),
@@ -190,7 +190,7 @@ AbadIng.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 ┊ ${metadata.subject}
 ╰━─━─━─┈`
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./Resources/theme/Asteria.xlsx'),
