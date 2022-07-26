@@ -836,7 +836,7 @@ During ${clockString(new Date - user.afkTime)}
             const sami = simi.success
             await AbadIng.sendMessage(from, {text:sami}, {quoted:m})
         }*/
-        
+
         // AntiLink
         if (AntiLink) {
             linkgce = await AbadIng.groupInviteCode(from)
@@ -5023,7 +5023,7 @@ ${global.themeemoji} Media Url : ${images}`,
                 if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
                 anu = await fetchJson(`https://api.akuari.my.id/downloader/tiktok?link=${q}`)
                 lagu = await getBuffer(anu.respon.video)
-                texttk = ``
+                texttk = '❤️'
                 let buttons = [
                     { buttonId: `ttaud ${q}`, buttonText: { displayText: '⚝ Audio ⚝' }, type: 1 }
                 ]
@@ -7630,12 +7630,12 @@ ${themeemoji} Url : ${result.link}
 My family
 And all friends who helped assemble this sexy script !!!`)
                 break
-                case 'asteria':       
-    if (!q) return reply(`Hola  quieres charlar un rato?\n Responde con *${prefix + command}* (tu mensaje)\n\n ❤️Ejemplo ${prefix + command} Hola bot`)
-		anu = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=es&cf=false`)
-        simfg = (`${anu.success}`)      
-        m.reply(simfg)
-        break
+            case 'asteria':
+                if (!q) return reply(`Hola  quieres charlar un rato?\n Responde con *${prefix + command}* (tu mensaje)\n\n ❤️Ejemplo ${prefix + command} Hola bot`)
+                anu = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=es&cf=false`)
+                simfg = (`${anu.success}`)
+                m.reply(simfg)
+                break
             default:
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return reply(mess.owner)
