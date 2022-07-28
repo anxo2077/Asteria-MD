@@ -135,7 +135,7 @@ AbadIng.ev.on('group-participants.update', async (anu) => {
                 const xtime = moment.tz('America/Bogota').format('HH:mm:ss')
 	            const xdate = moment.tz('America/Bogota').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                const cavaw = await getBuffer(`https://raku-web.herokuapp.com/api/bot/welkom?nama=${AbadName}&gc=${metadata.subject}&ppgc=${ppgroup}&member=${xmembers}&pp=${ppuser}&bg=https://i.ibb.co/SRnT6Ff/Asteria-Thumb.jpg&apikey=RakuKeyTod`)
+                const cavaw = await getBuffer(`https://raku-web.herokuapp.com/api/bot/welkom?nama=${AbadName}&gc=Asteria-MD&ppgc=${encodeURIComponent(ppgroup)}&member=${xmembers}&pp=${encodeURIComponent(ppuser)}&bg=https://i.ibb.co/SRnT6Ff/Asteria-Thumb.jpg&apikey=RakuKeyTod`)
                 AsteriaBody = `╭━─━─┈
 ┊ @${AbadName.split("@")[0]}
 ╰━┬≯ *Welcome*
@@ -164,7 +164,7 @@ AbadIng.sendMessage(anu.id, buttonMessage)
 	                const Abadddate = moment.tz('America/Bogota').format('DD/MM/YYYY')
                 	let AbadName = num
                     const Abadmembers = metadata.participants.length
-                    const cavag = await getBuffer(`https://raku-web.herokuapp.com/api/bot/welkom?nama=${AbadName}&gc=${metadata.subject}&ppgc=${ppgroup}&member=${Abadmembers}&pp=${ppuser}&bg=https://i.ibb.co/SRnT6Ff/Asteria-Thumb.jpg&apikey=RakuKeyTod`)
+                    const cavag = await getBuffer(`https://raku-web.herokuapp.com/api/bot/welkom?nama=${AbadName}&gc=Asteria-MD&ppgc=${encodeURIComponent(ppgroup)}&member=${Abadmembers}&pp=${encodeURIComponent(ppuser)}&bg=https://i.ibb.co/SRnT6Ff/Asteria-Thumb.jpg&apikey=RakuKeyTod`)
                     AsteriaBody = `╭━─━─┈
 ┊ @${AbadName.split("@")[0]}
 ╰━┬≯ *Goodbye*
