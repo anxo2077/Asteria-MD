@@ -135,7 +135,6 @@ AbadIng.ev.on('group-participants.update', async (anu) => {
                 const xtime = moment.tz('America/Bogota').format('HH:mm:ss')
 	            const xdate = moment.tz('America/Bogota').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "57322536629-1604595598@g.us"}, "message": {orderMessage: {itemCount: 0,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'Asteri-MD', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 AsteriaBody = `╭━─━─┈
 ┊ @${AbadName.split("@")[0]}
 ╰━┬≯ *Welcome*
@@ -151,33 +150,19 @@ let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./Resources/theme/Asteria.xlsx'),
-mimetype: docs,
-jpegThumbnail:buffer,
-mentions: [num],
-fileName: `${metadata.subject}`,
-fileLength: 99999999999999,
+image: buffer,
 caption: AsteriaBody,
-footer: `${botname}`,
+footer: `${global.botname}`,
 buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `No olvides leer la descripción del grupo.`,
-mediaType:2,
-thumbnail: buffer,
-sourceUrl: `${websitex}`,
-mediaUrl: `${websitex}`
-}}
+headerType: 4
 }
-AbadIng.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+AbadIng.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	const buffer = await getBuffer(ppuser)
                     const Abadtime = moment.tz('America/Bogota').format('HH:mm:ss')
 	                const Abadddate = moment.tz('America/Bogota').format('DD/MM/YYYY')
                 	let AbadName = num
                     const Abadmembers = metadata.participants.length
-                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "57322536629-1604595598@g.us"}, "message": {orderMessage: {itemCount: 0,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'Asteri-MD', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     AsteriaBody = `╭━─━─┈
 ┊ @${AbadName.split("@")[0]}
 ╰━┬≯ *Goodbye*
@@ -189,30 +174,17 @@ AbadIng.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 ╭━┴━─≯ *Grupo*
 ┊ ${metadata.subject}
 ╰━─━─━─┈`
-let buttons = [
+let wbutsss = [
 {buttonId: `menu`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./Resources/theme/Asteria.xlsx'),
-mimetype: docs,
-jpegThumbnail:buffer,
-mentions: [num],
-fileName: `${metadata.subject}`,
-fileLength: 99999999999999,
+image: buffer,
 caption: AsteriaBody,
-footer: `${botname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `¡Adiós! mi amigo, cuídate.`,
-mediaType:2,
-thumbnail: buffer,
-sourceUrl: `${websitex}`,
-mediaUrl: `${websitex}`
-}}
+footer: `${global.botname}`,
+buttons: wbutsss,
+headerType: 4
 }
-AbadIng.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+AbadIng.sendMessage(anu.id, buttonMessage)
                 }
             }
         } catch (err) {
